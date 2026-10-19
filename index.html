@@ -1,241 +1,174 @@
-
+ 
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#081426">
-  <meta name="description" content="Website resmi Pejuang Sangu Bear New Generation. Bersatu, berkarya, dan membangun generasi muda.">
-  <title>Pejuang Sangu Bear New Generation</title>
+  <meta name="theme-color" content="#10130f">
+  <meta name="description" content="Pejuang Sangu Bear — kebersamaan, kreativitas, dan semangat generasi muda.">
+  <title>Pejuang Sangu Bear</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/jpeg" href="images/logo.jpg">
 </head>
 <body>
-
-  <header class="header">
-    <a href="#beranda" class="brand">
-      <div class="brand-logo">PSB</div>
-      <div class="brand-text">
-        <strong>PEJUANG SANGU BEAR</strong>
-        <span>NEW GENERATION</span>
-      </div>
-    </a>
-
+  <header class="header" id="beranda">
+    <a class="brand" href="#beranda">
+      <img src="images/logo.jpg" alt="Logo Organisasi" class="brand-logo">
     <button class="menu-toggle" id="menuToggle"
       aria-label="Buka menu" aria-expanded="false">☰</button>
-
-    <nav class="nav" id="navMenu">
+    <nav class="nav" id="nav">
       <a href="#beranda">Beranda</a>
-      <a href="#profil">Profil</a>
-      <a href="#visi-misi">Visi Misi</a>
-      <a href="#pengurus">Pengurus</a>
+      <a href="#tentang">Tentang</a>
       <a href="#galeri">Galeri</a>
-      <a href="#kontak" class="nav-contact">Hubungi Kami</a>
+      
+<div class="contact-whatsapp">
+  <h3>Hubungi Kami</h3>
+  <p>
+    Ada pertanyaan atau ingin bergabung dengan
+    Pejuang Sangu Bear? Hubungi kami melalui WhatsApp.
+  </p>
+
+  <a
+    href="https://wa.me/6283872016733"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="whatsapp-button"
+  >
+  <span>☏</span> Hubungi Kami via WhatsApp
+  </a>
+
+  <p class="whatsapp-number">
+    WhatsApp: 6283872016733
+  </p>
+</div>
+
     </nav>
   </header>
 
   <main>
-    <section class="hero" id="beranda">
-      <div class="hero-overlay"></div>
-      <div class="hero-content">
-        <span class="eyebrow">ORGANISASI PEMUDA</span>
-        <h1>PEJUANG SANGU BEAR
-          <span>NEW GENERATION</span>
-        </h1>
-        <p>
-          Bersatu dalam kebersamaan, bergerak dalam aksi,
-          dan berkarya untuk masa depan yang lebih baik.
+    <section class="hero">
+      <div class="hero-glow"></div>
+      <div class="hero-content reveal">
+        <div class="eyebrow"><span class="live-dot"></span> SELAMAT DATANG DI WEBSITE KAMI</div>
+        <h1>Berani Bermimpi.<br><span>Bergerak Bersama.</span></h1>
+        <p class="hero-text">
+          Tempat semangat, kebersamaan, dan kreativitas bertemu.
+          Inilah Pejuang Sangu Bear.
         </p>
-        <div class="hero-buttons">
-          <a href="#profil" class="btn btn-gold">Kenali Organisasi</a>
-          <a href="#kontak" class="btn btn-outline">Hubungi Kami</a>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#tentang">Jelajahi Kami <span>↘</span></a>
+          <a class="btn btn-ghost" href="#galeri">Lihat Galeri</a>
         </div>
-        <div class="hero-tag">SOLIDARITAS • KREATIVITAS • KEBERSAMAAN</div>
+        <div class="hero-note">
+          <span class="note-icon">✦</span>
+          <span>Satukan langkah, ciptakan cerita.</span>
+        </div>
       </div>
-      <div class="hero-mark">PSB<span>.</span></div>
-    </section>
 
-    <section class="section intro" id="profil">
-      <div class="section-label">TENTANG KAMI</div>
-      <h2>Muda, Bersatu, <span>Bergerak.</span></h2>
-      <p class="section-desc">
-        Pejuang Sangu Bear New Generation adalah wadah
-        kebersamaan generasi muda untuk membangun solidaritas,
-        mengembangkan potensi, dan menciptakan kegiatan
-        positif bagi lingkungan dan masyarakat.
-      </p>
-
-      <div class="info-grid">
-        <article class="info-card">
-          <div class="info-icon">✦</div>
-          <h3>Kebersamaan</h3>
-          <p>Menjaga persaudaraan, saling mendukung, dan tumbuh bersama.</p>
-        </article>
-        <article class="info-card">
-          <div class="info-icon">↗</div>
-          <h3>Kreativitas</h3>
-          <p>Mendorong ide dan potensi pemuda menjadi kegiatan nyata.</p>
-        </article>
-        <article class="info-card">
-          <div class="info-icon">◆</div>
-          <h3>Pengabdian</h3>
-          <p>Berpartisipasi dalam kegiatan sosial yang bermanfaat.</p>
-        </article>
+      <div class="hero-art reveal">
+        <div class="art-ring"></div>
+        <div class="art-card">
+          <div class="art-top"><span>PSB / COMMUNITY</span><span>✳</span></div>
+          <img src="images/logo.jpg" alt="Logo Organisasi" class="brand-logo">           
+          <span>SEMANGAT<br><b>PEJUANG!</b></span>
+            <span class="art-number"></span>
+          </div>
+        </div>
+        <span class="float-tag tag-one">✦ SOLIDARITAS</span>
+        <span class="float-tag tag-two">GENERASI BERANI ↗</span>
       </div>
     </section>
 
-    <section class="section vision" id="visi-misi">
-      <div class="section-label">ARAH PERJUANGAN</div>
-      <h2>Visi & <span>Misi</span></h2>
-      <div class="vision-grid">
-        <article class="vision-card">
-          <span class="card-number">01 / VISI</span>
-          <h3>Menjadi Generasi yang Solid dan Berdampak</h3>
-          <p>
-            Membangun generasi muda yang kompak, kreatif,
-            bertanggung jawab, dan aktif memberikan dampak
-            positif bagi masyarakat.
-          </p>
-        </article>
-        <article class="vision-card">
-          <span class="card-number">02 / MISI</span>
-          <h3>Langkah Nyata Bersama</h3>
-          <ul>
-            <li>Mempererat persaudaraan dan solidaritas pemuda.</li>
-            <li>Mengadakan kegiatan sosial dan kemasyarakatan.</li>
-            <li>Mengembangkan bakat, kreativitas, dan keterampilan.</li>
-            <li>Menanamkan tanggung jawab serta semangat gotong royong.</li>
-            <li>Membangun organisasi yang terbuka dan bermanfaat.</li>
-          </ul>
-        </article>
-      </div>
-      <p class="small-note">
-        Catatan: visi dan misi ini adalah draf awal dan bisa
-        disesuaikan dengan hasil kesepakatan organisasi.
-      </p>
+    <section class="stats reveal" aria-label="Nilai komunitas">
+      <div><strong></strong><span>KEBERSAMAAN</span></div>
+      <div><strong></strong><span>KREATIVITAS</span></div>
+      <div><strong></strong><span>SEMANGAT</span></div>
+      <div><strong></strong><span>MASA DEPAN</span></div>
     </section>
 
-    <section class="section team" id="pengurus">
-      <div class="section-label">DI BALIK ORGANISASI</div>
-      <h2>Struktur <span>Pengurus</span></h2>
-      <p class="section-desc">
-        Kenali tim yang menggerakkan Pejuang Sangu Bear New Generation.
-      </p>
-
-      <div class="team-grid">
-        <article class="team-card">
-          <div class="avatar">K</div>
-          <h3>HASAN !TACH!</h3>
-          <p>Ketua</p>
-        </article>
-        <article class="team-card">
-          <div class="avatar">W</div>
-          <h3>FAISAL </h3>
-          <p>Wakil Ketua</p>
-        </article>
-        <article class="team-card">
-          <div class="avatar">S</div>
-          <h3>DENI WILDAN</h3>
-          <p>Sekretaris</p>
-        </article>
-        <article class="team-card">
-          <div class="avatar">B</div>
-          <h3>DIKRI </h3>
-          <p>Bendahara</p>
-        </article>
+    <section class="section about" id="tentang">
+      <div class="section-heading reveal">
+        <span class="eyebrow">✳ TENTANG KAMI</span>
+        <h2>Satu nama.<br><span>Banyak cerita.</span></h2>
       </div>
-      <p class="small-note">
-        Ganti nama dan jabatan contoh di atas dengan data pengurus asli.
-      </p>
+      <div class="about-copy reveal">
+        <p>
+          Pejuang Sangu Bear adalah ruang untuk berbagi semangat,
+          membangun kebersamaan, dan menyimpan cerita perjalanan.
+          Setiap langkah kecil adalah bagian dari sesuatu yang lebih besar.
+          
+          
+          
+          SEJARAH SINGKAT BERDIRINYA PEJUANG SANGU BEAR 
+        8 tahun yang lalu tepatnya, pada tahun 2018, dua pemuda yang sedang ngahuleng bari ngopi yaitu pendiri Pejuang Sangu Béar, dua pemuda tersebut memiliki nama yaitu, Hasan itachi dan Deris uciha. Saat itu mereka ngahuleng tarik membayangkan bagaimana jika mereka memiliki sebuah organisasi, komunitas, kelompok, aliansi dan sejenisnya. Lalu pada saat itu juga mereka terpikirkan dengan satu kalimat yaitu "pejuang sangu bear" sambil seuserian karena kalimat itu sedikit seperti candaan namun, penuh makna yang dalam, karena kalimat tersebut terdiri dari tiga kata. 
+1). Pejuang. Kata pejuang merujuk pada kalimat "perjuangan" yang kalau diartikan secara kasar yaitu, peperangan, perlawanan, pertempuran dan sejenisnya. Namun, kata "pejuang" menurut istilah disini, bukan seperti itu melainkan, perjuangan dalam diri kita, melawan nafsu besar, nafsu tamak, serakah. Terutama ketika kita ingin memakan nasi pulen pada musim muyang (hésé kéjo) yang memang sangat jarang sekali orang-orang memilikinya. 
+2). Sangu. Terdiri dari lima huruf abjad, sedikit tapi berarti bagi kehidupan kita. Kata ini di ambil dari Bahasa Sunda, yang berarti NASI. Nasi merupakan bahan pokok utama dalam menyajikan makanan, tanpa nasi, dahar terasa teu ngeunah, hidup terasa hampa, karena adanya rasa giung, pengaruh dari dangena tapi, ketika dimakan dengan nasi maka, terasa hidup kembali, dan meskipun hanya terdiri dari lima huruf saja, jangan sampai meremehkan angka lima karena, tanpa lima tidak akan ada kata "panca" dalam kalimat pancasila dan tidak akan berdiri juga dasar negara Indonesia tanpa adanya kata panca yang berarti lima. Terutama saat kita makan bersama lebih dari lima orang, meskipun hanya dengan asin japuh tapi, terasa sedang makan di hotel bintang lima, kana awak teu ripuh. 
+3). Bear. Bear merupakan kata yang paling di benci oleh orang-orang yang suka "sangu pulen" karena, begitu sangu di angkat kaluhur, dengan polosnya dia morolok, dan sudah pasti rata-rata orang menghela nafas yang dalam, seakan-akan tidak menemukan jalan keluar, tidak ada kata semangat untuk melakukan makan. Tapi, disini kita di ajarkan untuk tidak pilih-pilih nasi karena semua nasi itu sama!!! 
+Dari ketiga kata itulah lahirnya "pejuang sangu bear" Kemudian, setelah itu tidak lama kedua pemuda tersebut menyebarkannya kepada teman-teman sebayanya, untuk mendirikan organisasi tersebut. Dan siapa sangka ternyata teman-temannya mendukung dan siap untuk mendirikan organisasi ini, lalu mereka pun membuat baju seragam, seperti organisasi-organisasi lainnya. Jumlah anggota angkatan pertama sekaligus para pendirinya pada saat itu, baru 10 ribu kurang 9.994 orang. Tidak lama setelah itu, virus corona (COVID-19) pun datang dan organisasi pun sempat terhenti selama kurang lebih 7 tahun. Dan pada tahun ini tepatnya, tahun 2026 saatnya kita para pemuda generasi baru, untuk siap terjun mengelola organisasi ini dengan semaksimal mungkin!!!. Hingga akhirnya organisasi ini kembali bangkit lagi dan jumlah anggotanya pun bertambah pesat dari 10 ribu kurang 9.994 orang sekarang menjadi 15 ribu kurang 14.980 orang Anggota. Dan kami pun akan terus berusaha, berjuang, agar organisasi ini berguna bagi masyarakat setempat maupun sekitarnya, terutama bagi agama dan bangsa🙏🙏 
+Dan itulah sejarah singkat mengenai berdirinya Organisasi Pejuang Sangu bear, Pejuang sangu bear juga mempunyai selogan yaitu, "sangu boleh béar, tapi
+
+        </p>
+        <a class="text-link" href="#galeri">Kenali perjalanan kami <span>↗</span></a>
+      </div>
     </section>
 
-    <section class="section gallery" id="galeri">
-      <div class="section-label">JEJAK KEBERSAMAAN</div>
-      <h2>Galeri <span>Kegiatan</span></h2>
-      <p class="section-desc">
-        Dokumentasi perjalanan dan kegiatan organisasi kami.
-      </p>
+    <section class="section gallery-section" id="galeri">
+      <div class="gallery-heading reveal">
+        <div>
+          <span class="eyebrow">✳ MOMEN PILIHAN</span>
+          <h2>Cerita dalam <span>gambar.</span></h2>
+        </div>
+        <p>Setiap momen punya cerita.<br>Ini sebagian dari perjalanan kami.</p>
+      </div>
 
       <div class="gallery-grid">
-        <button class="gallery-item gallery-one" data-title="Kebersamaan Pemuda">
-  <img src="images/fotbar.jpg" alt="Kegiatan pemuda">
-  <span class="gallery-caption">Kebersamaan Pemuda</span>
-</button>
-          
-        <button class="gallery-item gallery-two" data-title="mukbang bersama">
-          <span class="gallery-symbol">♥</span>
-          <span class="gallery-caption">Kegiatan Sosial</span>
+        <button class="gallery-item gallery-large reveal" data-image="images/galeri1.jpg"
+          aria-label="Lihat foto 1">
+          <img src="images/galeri1.jpg" alt="Momen Pejuang Sangu Bear"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+          <span class="photo-placeholder"><b>01</b><span>Ganti dengan foto kegiatan</span></span>
+          <span class="gallery-label">MOMEN KEBERSAMAAN ↗</span>
         </button>
-        <button class="gallery-item gallery-three" data-title="Gotong Royong">
-          <span class="gallery-symbol">✚</span>
-          <span class="gallery-caption">Gotong Royong</span>
+        <button class="gallery-item reveal" data-image="images/galeri2.jpg"
+          aria-label="Lihat foto 2">
+          <img src="images/galeri2.jpg" alt="Kegiatan komunitas"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+          <span class="photo-placeholder"><b>02</b><span>Ganti dengan foto kegiatan</span></span>
+          <span class="gallery-label">CERITA KAMI ↗</span>
         </button>
-        <button class="gallery-item gallery-four" data-title="Pertemuan Anggota">
-          <span class="gallery-symbol">◎</span>
-          <span class="gallery-caption">Pertemuan Anggota</span>
+        <button class="gallery-item reveal" data-image="images/galeri3.jpg"
+          aria-label="Lihat foto 3">
+          <img src="images/galeri3.jpg" alt="Kenangan komunitas"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+          <span class="photo-placeholder"><b>03</b><span>Ganti dengan foto kegiatan</span></span>
+          <span class="gallery-label">KENANGAN ↗</span>
         </button>
       </div>
-      <p class="small-note">
-        Kotak di atas masih berupa desain contoh. Tambahkan foto
-        asli organisasi mengikuti panduan di bawah.
-      </p>
+      <p class="gallery-hint">Ketuk foto untuk memperbesar. Ganti gambar contoh dengan foto milikmu.</p>
     </section>
 
-    <section class="join">
-      <div class="section-label">GENERASI BERGERAK</div>
-      <h2>Perubahan Dimulai dari <span>Kita.</span></h2>
-      <p>
-        Mari bangun kebersamaan dan ciptakan kegiatan positif
-        bersama Pejuang Sangu Bear New Generation.
-      </p>
-      <a href="#kontak" class="btn btn-gold">Kenali Kami Lebih Dekat</a>
-    </section>
-
-    <section class="section contact" id="kontak">
-      <div class="section-label">TERHUBUNG BERSAMA KAMI</div>
-      <h2>Kontak <span>Organisasi</span></h2>
-      <p class="section-desc">
-        Punya pertanyaan, ide kegiatan, atau ingin bergabung?
-        Hubungi pengurus melalui WhatsApp.
-      </p>
-
-      <div class="contact-card">
-        <div class="contact-icon">WA</div>
-        <div class="contact-info">
-          <h3>WhatsApp Organisasi</h3>
-          <p>Pejuang Sangu Bear New Generation</p>
-        </div>
-        <a id="whatsappLink" class="btn btn-green"
-          href="https://wa.me/6281234567890"
-          target="_blank" rel="noopener">Chat Sekarang ↗</a>
+    <section class="contact-section reveal" id="kontak">
+      <div>
+        <span class="eyebrow">✳ LANGKAH BERIKUTNYA</span>
+        <h2>Punya cerita?<br><span>Mari terhubung.</span></h2>
       </div>
-      <p class="small-note">
-        Nomor WhatsApp di atas hanya contoh. Ganti dengan nomor resmi.
-      </p>
+      <a class="btn btn-dark" href="mailto:officialsangubear@gmail.com">
+        Hubungi Kami <span>↗</span>
+      </a>
     </section>
   </main>
 
   <footer class="footer">
-    <a href="#beranda" class="brand footer-brand">
-      <div class="brand-logo">PSB</div>
-      <div class="brand-text">
-        <strong>PEJUANG SANGU BEAR</strong>
-        <span>NEW GENERATION</span>
-      </div>
-    </a>
-    <p>Bersatu • Berkarya • Berdampak</p>
-    <p class="copyright">
-      © <span id="year"></span> Pejuang Sangu Bear New Generation.
-      Hak cipta dilindungi.
-    </p>
+    <a class="brand footer-brand" href="#beranda">
+      <img src="images/logo.jpg" alt="Logo Organisasi" class="brand-logo">
+    <p>© <span id="year"></span> Pejuang Sangu Bear. Dibuat dengan semangat.</p>
+    <a href="#beranda" class="back-top">KEMBALI KE ATAS ↑</a>
   </footer>
 
-  <a id="floatingWA" class="floating-wa"
-     href="https://wa.me/6281234567890"
-     target="_blank" rel="noopener" aria-label="WhatsApp">WA</a>
-
-  <div class="lightbox" id="lightbox" aria-hidden="true">
-    <button id="closeLightbox" aria-label="Tutup foto">✕</button>
-    <p id="lightboxTitle"></p>
+  <div class="lightbox" id="lightbox" role="dialog"
+    aria-modal="true" aria-label="Tampilan foto" hidden>
+    <button class="lightbox-close" id="lightboxClose" aria-label="Tutup">×</button>
+    <img id="lightboxImage" src="" alt="Foto diperbesar">
   </div>
 
   <script src="script.js"></script>
