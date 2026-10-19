@@ -1,93 +1,85 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle = document.getElementById("menuToggle");
+  const nav = document.getElementById("nav");
 
-/*
-  PEJUANG SANGU BEAR NEW GENERATION
-  Ubah nomor WhatsApp di bagian KONFIGURASI.
-*/
+  // Menu navigasi HP
+  if (menuToggle && nav) {
+    menuToggle.addEventListener("click", function () {
+      const isOpen = nav.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.textContent = isOpen ? "×" : "☰";
+    });
 
-const CONFIG = {
-  // Ganti dengan nomor WhatsApp resmi.
-  // Format: kode negara + nomor, tanpa +, spasi, atau tanda -.
-  whatsapp: "6281572725258"
-};
-
-// MENU NAVIGASI HP
-const menuToggle = document.getElementById("menuToggle");
-const navMenu = document.getElementById("navMenu");
-
-menuToggle.addEventListener("click", () => {
-  const isOpen = navMenu.classList.toggle("open");
-
-  menuToggle.setAttribute("aria-expanded", String(isOpen));
-  menuToggle.setAttribute(
-    "aria-label",
-    isOpen ? "Tutup menu" : "Buka menu"
-  );
-
-  menuToggle.textContent = isOpen ? "✕" : "☰";
-});
-
-// Tutup menu setelah salah satu tautan dipilih.
-document.querySelectorAll("#navMenu a").forEach((link) => {
-  link.addEventListener("click", () => {
-    navMenu.classList.remove("open");
-    menuToggle.setAttribute("aria-expanded", "false");
-    menuToggle.setAttribute("aria-label", "Buka menu");
-    menuToggle.textContent = "☰";
-  });
-});
-
-// TAHUN OTOMATIS
-document.getElementById("year").textContent =
-  new Date().getFullYear();
-
-// WHATSAPP
-function setupWhatsApp() {
-  const number = CONFIG.whatsapp.replace(/\D/g, "");
-
-  const message =
-    "Halo Pejuang Sangu Bear New Generation, " +
-    "gw ingin mengetahui informasi tentang organisasi.";
-
-  const whatsappURL =
-    "https://wa.me/" + number +
-    "?text=" + encodeURIComponent(message);
-
-  document.getElementById("whatsappLink").href = whatsappURL;
-  document.getElementById("floatingWA").href = whatsappURL;
-}
-
-setupWhatsApp();
-
-// GALERI
-const lightbox = document.getElementById("lightbox");
-const lightboxTitle = document.getElementById("lightboxTitle");
-const closeLightbox = document.getElementById("closeLightbox");
-
-document.querySelectorAll(".gallery-item").forEach((item) => {
-  item.addEventListener("click", () => {
-    lightboxTitle.textContent =
-      item.dataset.title || "Kegiatan Organisasi";
-
-    lightbox.classList.add("active");
-    lightbox.setAttribute("aria-hidden", "false");
-  });
-});
-
-function hideLightbox() {
-  lightbox.classList.remove("active");
-  lightbox.setAttribute("aria-hidden", "true");
-}
-
-closeLightbox.addEventListener("click", hideLightbox);
-
-lightbox.addEventListener("click", (event) => {
-  if (event.target === lightbox) {
-    hideLightbox();
+    nav.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        nav.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.textContent = "☰";
+      });
+    });
   }
-});
 
-document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") {
-    hideLightbox();
+  // Animasi elemen ketika masuk layar
+  const revealElements = document.querySelectorAll(".reveal");
+
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    revealElements.forEach(function (element) {
+      observer.observe(element);
+    });
+  } else {
+    revealElements.forEach(function (element) {
+      element.classList.add("visible");
+    });
   }
+
+  // Tahun otomatis di footer
+  const year = document.getElementById("year");
+  if (year) year.textContent = new Date().getFullYear();
+
+  // Galeri foto: buka tampilan besar
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImage = document.getElementById("lightboxImage");
+  const lightboxClose = document.getElementById("lightboxClose");
+
+  function closeLightbox() {
+    if (!lightbox || !lightboxImage) return;
+    lightbox.hidden = true;
+    lightboxImage.src = "";
+    document.body.style.overflow = "";
+  }
+
+  document.querySelectorAll(".gallery-item").forEach(function (item) {
+    item.addEventListener("click", function () {
+      const image = item.querySelector("img");
+      if (!image || !image.complete || image.naturalWidth === 0) return;
+
+      lightboxImage.src = image.src;
+      lightboxImage.alt = image.alt || "Foto galeri";
+      lightbox.hidden = false;
+      document.body.style.overflow = "hidden";
+    });
+  });
+
+  if (lightboxClose) {
+    lightboxClose.addEventListener("click", closeLightbox);
+  }
+
+  if (lightbox) {
+    lightbox.addEventListener("click", function (event) {
+      if (event.target === lightbox) closeLightbox();
+    });
+  }
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") closeLightbox();
+  });
 });
